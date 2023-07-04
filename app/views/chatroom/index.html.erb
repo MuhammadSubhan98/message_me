@@ -1,0 +1,35 @@
+<div class="d-flex justify-content-center align-items-center">
+    <div class="card rounded-circle d-flex justify-content-center align-items-center mt-3">
+        <div class="card-body d-flex justify-content-center align-items-center">
+            <%= image_tag("favicon.ico" , style: "width: 40px;") %>
+        </div>
+    </div>
+</div>
+<div class="text-center font-weight-bold">
+    Say Something
+</div>
+
+<div class="container mt-2 mb-4">
+  <div class="row">
+    <div class="col-sm-8 border mr-4 box-shadow pb-2 p-1">
+        <div class="d-flex flex-column justify-content-between h-100">
+            <div class="message-container p-3">
+                <%= render @messages %> 
+            </div>
+            <form class="form-inline">
+                <div class="form-group col-sm-11 p-0">
+                    <input type="text" class="form-control col-sm-12" id="textInput" placeholder="Type your message here">
+                </div>
+                <button type="submit" class="btn btn-primary col-sm-1">Send</button>
+            </form>
+        </div>
+    </div>
+    <div class="col-sm-3 card text-primary box-shadow">
+        <ul class="list-group card-body float-left" >
+            <li class="list-group-item active " aria-current="true">Home</li>
+            <li class="list-group-item bg-dark">Messages</li>
+            <li class="list-group-item bg-dark">Friends</li>
+        </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+    <nav class="navbar navbar-expand-lg bg-dark">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+            <li class="nav-item">
+              <%= link_to "Chatroom", root_path, class:"nav-link pl-5" %>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link pl-5" href="#">Messages</a>
+            </li>
+            <% if logged_in? %>
+              <li class="nav-item">
+                <%= link_to "Logout", logout_path, method: :delete, class: "nav-link pl-5"%>
+              </li>            
+            <%else%>
+              <li class="nav-item">
+                <%= link_to 'Log in', login_path, class:"nav-link pl-5" %> 
+              </li>          
+          </ul>
+              <button class="btn btn-primary ml-4 ml-auto" type="submit">Sign up</button>
+            <%end%>
+            
+        </div>
+      </div>
+    </nav>

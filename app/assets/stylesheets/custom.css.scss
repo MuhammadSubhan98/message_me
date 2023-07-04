@@ -1,0 +1,19 @@
+@import 'bootstrap/dist/css/bootstrap';
+
+*{
+    margin: 0;
+    padding: 0;
+}  
+
+.card-body{
+    padding: 0.85rem;
+}
+.crd{
+    width: 5rem;
+}
+
+.box-shadow{
+    box-shadow: 0 0 4px  rgba(0, 0, 0, 0.2);
+    height: 28rem;
+}
+
