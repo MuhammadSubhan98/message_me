@@ -18,3 +18,17 @@ require("channels")
 
 import "bootstrap"
 
+scroll_bottom = function() {
+    if ($('#message-container').length > 0) {
+      $('#message-container').scrollTop($('#message-container')[0].scrollHeight);
+    }
+  }
+  
+  
+  $(document).on('turbolinks:load', function() {
+    $('.ui.dropdown').dropdown();
+    $('.message .close').on('click', function() {
+      $(this).closest('.message').transition('fade');
+    });
+    scroll_bottom();
+  })

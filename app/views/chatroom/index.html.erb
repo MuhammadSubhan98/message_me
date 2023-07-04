@@ -13,15 +13,15 @@
   <div class="row">
     <div class="col-sm-8 border mr-4 box-shadow pb-2 p-1">
         <div class="d-flex flex-column justify-content-between h-100">
-            <div class="message-container p-3">
+            <div class="message-container p-3" id= "message-container">
                 <%= render @messages %> 
             </div>
-            <form class="form-inline">
+            <%= form_for( @message, html: {class: "form-inline ui replay form", role: "form"}, url: message_path) do |f| %>            
                 <div class="form-group col-sm-11 p-0">
-                    <input type="text" class="form-control col-sm-12" id="textInput" placeholder="Type your message here">
+                    <%= f.text_field :body, placeholder: "Type your message here", class: "form-control col-sm-12" %>                    
                 </div>
-                <button type="submit" class="btn btn-primary col-sm-1">Send</button>
-            </form>
+                <%= f.button "Send", class: "btn btn-primary col-sm-1" %>          
+            <% end %>            
         </div>
     </div>
     <div class="col-sm-3 card text-primary box-shadow">
